@@ -1,6 +1,5 @@
 "use client";
 import TypingEffect from "@/components/TypingEffect";
-import TechIcons from "@/components/TechIcons";
 import Projects from "@/components/Projects";
 import WorkExperience from "@/components/WorkExperience";
 import Contact from "@/components/Contact";
@@ -13,10 +12,10 @@ export default function Home() {
           style={{ fontFamily: "var(--font-instrument-serif)" }}
           className="text-2xl font-semibold"
         >
-          LogoHere
+          <img src="https://avatars.githubusercontent.com/u/169994948?v=4" alt="avatar" className="rounded-full size-[50px]"/>
         </div>
         <ul
-          className="hidden md:flex items-center gap-8 text-sm"
+          className="hidden items-center gap-8 text-sm"
           style={{ fontFamily: "var(--font-inter)" }}
         >
           <li>
@@ -79,7 +78,6 @@ export default function Home() {
           digital solutions.
         </p>
         </div>
-        {/* <TechIcons /> */}
         {/* CTA Buttons */}
         {/* <div className="flex flex-col sm:flex-row gap-6 mb-20" style={{ fontFamily: "var(--font-inter)" }}>
           <button className="px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-200 transition">

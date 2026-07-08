@@ -85,7 +85,6 @@ export default function WorkExperience() {
                 ))}
               </ul>
             </div>
-
             <div className="work-rep-card w-1/4 overflow-hidden bg-gray-900/30 hover:border-gray-500 transition"
             >
             <a href={exp.link} target="_blank" rel="noopener noreferrer">

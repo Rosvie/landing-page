@@ -5,8 +5,9 @@ import { useEffect, useState } from "react";
 const words = [
   "Front-End Developer",
   "Wordpress Developer",
-  "Content Creator",
   "Problem Solver",
+  "Capcut Editor",
+  "AI Bestfriend"
 ];
 
 export default function TypingEffect() {
