@@ -43,9 +43,9 @@ const experiences = [
 
 export default function WorkExperience() {
   return (
-    <div className="w-full max-w-6xl mb-24">
+    <div className="mb-16 w-full max-w-6xl sm:mb-24">
       <h2
-        className="text-4xl md:text-5xl font-bold mb-10"
+        className="mb-8 text-3xl font-bold sm:text-4xl md:text-5xl"
         style={{ fontFamily: "var(--font-instrument-serif)" }}
       >
         Work Experience
@@ -55,24 +55,24 @@ export default function WorkExperience() {
         {experiences.map((exp) => (
           <div
             key={exp.id}
-            className="flex w-full gap-0 rounded-lg border border-gray-700 overflow-hidden"
+            className="flex flex-col overflow-hidden rounded-lg border border-gray-700 bg-gray-900/30 md:flex-row"
           >
             <div
-              className="work-exp-card w-3/4 p-8 bg-gray-900/30 hover:border-gray-500 transition"
+              className="w-full bg-gray-900/30 p-6 transition sm:p-8 md:w-3/4"
             >
               <h3
-                className="text-3xl font-bold text-white mb-2"
+                className="mb-2 text-2xl font-bold text-white sm:text-3xl"
                 style={{ fontFamily: "var(--font-instrument-serif)" }}
               >
                 {exp.company}
               </h3>
               <p
-                className="text-gray-300 italic text-lg mb-4"
+                className="mb-4 text-base text-gray-300 italic sm:text-lg"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 {exp.position}
               </p>
-              <span className="inline-block px-4 py-2 bg-white text-black text-sm font-medium rounded-full mb-6">
+              <span className="mb-6 inline-block rounded-full bg-white px-4 py-2 text-sm font-medium text-black">
                 {exp.duration}
               </span>
 
@@ -85,15 +85,14 @@ export default function WorkExperience() {
                 ))}
               </ul>
             </div>
-            <div className="work-rep-card w-1/4 overflow-hidden bg-gray-900/30 hover:border-gray-500 transition"
-            >
-            <a href={exp.link} target="_blank" rel="noopener noreferrer">
-              <img
-                src={exp.image}
-                alt="Work representation"
-                className="w-full h-full object-cover"
-              />
-            </a>
+            <div className="w-full overflow-hidden bg-gray-900/30 transition md:w-1/4">
+              <a href={exp.link} target="_blank" rel="noopener noreferrer" className="block h-full">
+                <img
+                  src={exp.image}
+                  alt="Work representation"
+                  className="h-56 w-full object-cover sm:h-64 md:h-full"
+                />
+              </a>
             </div>
           </div>
         ))}

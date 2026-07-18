@@ -29,18 +29,18 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="w-full max-w-6xl mb-24">
+    <div className="mb-16 w-full max-w-6xl sm:mb-24">
       <p
-        className="text-4xl md:text-5xl font-bold mb-10"
+        className="mb-8 text-3xl font-bold sm:text-4xl md:text-5xl"
         style={{ fontFamily: "var(--font-instrument-serif)" }}
       >
         Projects
       </p>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="project-card lg:col-span-1 border border-gray-700 rounded-lg hover:border-gray-500 transition cursor-pointer bg-gray-900/50 overflow-hidden"
+            className="project-card overflow-hidden rounded-lg border border-gray-700 bg-gray-900/50 transition hover:border-gray-500 lg:col-span-1"
           >
             <a
               href={project.link}
@@ -50,9 +50,9 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt="Website Banner"
-                className="w-full object-cover h-60"
+                className="h-56 w-full object-cover sm:h-60 lg:h-64"
               />
-              <div className="p-6">
+              <div className="p-5 sm:p-6">
                 <h3
                   className="text-white text-lg text-center font-semibold mb-1"
                   style={{ fontFamily: "var(--font-instrument-serif)" }}

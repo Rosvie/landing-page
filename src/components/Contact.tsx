@@ -10,9 +10,9 @@ const CONTACT = {
 
 export default function Contact() {
   return (
-    <div className="w-full max-w-6xl">
+    <div className="w-full max-w-6xl pb-8">
       <h2
-        className="text-4xl md:text-5xl font-bold mb-4"
+        className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl"
         style={{ fontFamily: "var(--font-instrument-serif)" }}
       >
         Connect With Me
@@ -21,7 +21,7 @@ export default function Contact() {
       <div className="space-y-4">
         {/* Social Media */}
         <div>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <a
               href={CONTACT.linkedinLink}
               target="_blank"
@@ -54,7 +54,7 @@ export default function Contact() {
 
           <a
             href={`mailto:${CONTACT.email}`}
-            className="flex items-center gap-1 text-gray-300 hover:text-white transition"
+            className="flex items-center gap-1 break-all text-gray-300 transition hover:text-white"
           >
             <span>✉️</span>
             <span>{CONTACT.email}</span>

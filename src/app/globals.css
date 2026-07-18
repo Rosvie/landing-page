@@ -37,10 +37,27 @@
   --font-mono: var(--font-geist-mono);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 body {
+  margin: 0;
   background: var(--color-background);
   color: var(--color-text-primary);
   font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .dark-gradient {
   background: radial-gradient(
