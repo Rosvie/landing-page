@@ -29,7 +29,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="mb-16 w-full max-w-6xl sm:mb-24">
+    <section id="projects" className="mb-16 scroll-mt-24 w-full max-w-6xl sm:mb-24">
       <p
         className="mb-8 text-3xl font-bold sm:text-4xl md:text-5xl"
         style={{ fontFamily: "var(--font-instrument-serif)" }}
@@ -80,6 +80,6 @@ export default function Projects() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
