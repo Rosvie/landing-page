@@ -10,12 +10,12 @@ const CONTACT = {
 
 export default function Contact() {
   return (
-    <section id="contact" className="w-full max-w-6xl scroll-mt-24 pb-8">
+    <section id="contact" className="w-full max-w-6xl scroll-mt-24">
       <h2
         className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl"
         style={{ fontFamily: "var(--font-instrument-serif)" }}
       >
-        Let's Connect
+        Let&apos;s Connect
       </h2>
 
       <div className="space-y-4">

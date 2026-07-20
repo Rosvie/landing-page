@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 const words = [
-  "Front-End Developer",
-  "Wordpress Developer",
-  "Problem Solver",
-  "Capcut Editor",
-  "AI Bestfriend"
+  "Frontend Developer",
+  "Wordpress Frontend Developer",
+  "Video Editor",
+  "AI Content Creator",
+  "Detail Oriented",
 ];
 
 export default function TypingEffect() {
