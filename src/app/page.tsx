@@ -7,7 +7,7 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <div className="w-full min-h-screen overflow-x-hidden">
-      <nav className="fixed left-0 right-0 top-0 z-50 flex flex-col gap-4 px-4 py-4 md:flex-row md:items-center md:justify-between md:px-8 lg:px-12 border border-gray-700 bg-gray-900/30 backdrop-blur-md">
+      <nav className="fixed left-0 right-0 top-0 z-50 flex flex-col gap-4 px-4 py-4 md:flex-row md:items-center md:justify-between md:px-8 lg:px-12 backdrop-blur-md">
         <div
           style={{ fontFamily: "var(--font-instrument-serif)" }}
           className="text-2xl font-semibold"
@@ -42,12 +42,9 @@ export default function Home() {
         {/* <button className="px-6 py-2 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-200 transition" style={{ fontFamily: "var(--font-inter)" }}>Contact</button> */}
       </nav>
 
-      <main className="flex flex-col items-center justify-center mt-16">
-        <section
-          id="about"
-          className="w-full scroll-mt-24 px-4 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
-        >
-          <div className="mx-auto flex max-w-4xl flex-col items-center justify-center">
+      <main className="flex flex-col items-center justify-center">
+        <section id="about" className="scroll-mt-24 mt-20 px-4 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24" >
+          <div className="mx-auto flex flex-col items-center justify-center rounded-4xl w-full max-w-6xl px-12 py-16 sm:px-16 sm:py-20 lg:px-24 lg:py-28 backdrop-blur-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
             <h1
               className="mb-6 text-center text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
               style={{ fontFamily: "var(--font-instrument-serif)" }}
