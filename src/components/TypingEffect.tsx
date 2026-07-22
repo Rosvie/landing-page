@@ -10,10 +10,33 @@ const words = [
   "Detail Oriented",
 ];
 
+interface Spark {
+  id: number;
+  left: number;
+  top: number;
+  angle: number;
+  distance: number;
+}
+
 export default function TypingEffect() {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [sparks, setSparks] = useState<Spark[]>([]);
+
+  const createSparks = () => {
+    const newSparks = Array.from({ length: 8 }, (_, i) => ({
+      id: Date.now() + i,
+      left: 0,
+      top: 0,
+      angle: (i / 8) * Math.PI * 2,
+      distance: 0,
+    }));
+    setSparks(newSparks);
+
+    // Remove sparks after animation
+    setTimeout(() => setSparks([]), 600);
+  };
 
   useEffect(() => {
     const currentWord = words[index];
@@ -26,6 +49,7 @@ export default function TypingEffect() {
  
         // finished typing
         if (text === currentWord) {
+          createSparks();
           typingSpeed = 1000; // delay before deleting
           setTimeout(() => setIsDeleting(true), typingSpeed);
         }
@@ -44,9 +68,49 @@ export default function TypingEffect() {
   }, [text, isDeleting, index]);
 
   return (
-    <h1>
-      {text}
-      <span className="cursor">|</span>
-    </h1>
+    <div className="relative inline-block">
+      <h1>
+        {text}
+        <span className="cursor">|</span>
+      </h1>
+
+      {/* Spark particles */}
+      {sparks.map((spark) => (
+        <div
+          key={spark.id}
+          className="absolute pointer-events-none"
+          style={{
+            left: `${text.length * 0.5}ch`,
+            top: "0.25em",
+            animation: `spark-fly 0.6s ease-out forwards`,
+            "--spark-angle": `${spark.angle}rad`,
+            "--spark-distance": "40px",
+          } as React.CSSProperties & Record<string, string>}
+        >
+          <div
+            className="w-1 h-1 bg-white rounded-full shadow-lg"
+            style={{
+              boxShadow: "0 0 6px #ffffff, 0 0 12px rgba(255,255,255,0.6)",
+            }}
+          />
+        </div>
+      ))}
+
+      <style>{`
+        @keyframes spark-fly {
+          0% {
+            opacity: 1;
+            transform: translate(0, 0);
+          }
+          100% {
+            opacity: 0;
+            transform: translate(
+              calc(cos(var(--spark-angle)) * var(--spark-distance)),
+              calc(sin(var(--spark-angle)) * var(--spark-distance))
+            );
+          }
+        }
+      `}</style>
+    </div>
   );
 }

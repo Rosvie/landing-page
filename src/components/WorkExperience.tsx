@@ -81,7 +81,7 @@ function HorizontalGallery({ gallery, company }: { gallery: Array<{ src: string;
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block h-[220px] w-[400px] shrink-0 overflow-hidden rounded-md border border-gray-700 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:h-[200px]"
+            className="exp-card group block h-[220px] w-[400px] shrink-0 overflow-hidden rounded-md border border-gray-700 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:h-[200px]"
           >
             <img
               src={item.src}

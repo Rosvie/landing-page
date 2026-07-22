@@ -7,7 +7,7 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <div className="w-full min-h-screen overflow-x-hidden">
-      <nav className="fixed left-0 right-0 top-0 z-50 flex flex-col gap-4 px-4 py-4 md:flex-row md:items-center md:justify-between md:px-8 lg:px-12 backdrop-blur-md">
+      <nav className="fixed left-0 right-0 top-0 z-50 flex flex-col gap-4 px-4 py-4 md:flex-row md:items-center md:justify-between md:px-8 lg:px-12 shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_35px_60px_-15px_rgba(0,0,0,0.3),0_0_40px_rgba(255,255,255,0.06)] backdrop-blur-lg">
         <div
           style={{ fontFamily: "var(--font-instrument-serif)" }}
           className="text-2xl font-semibold"
@@ -18,24 +18,40 @@ export default function Home() {
           className="hidden items-center gap-8 text-sm md:flex"
           style={{ fontFamily: "var(--font-inter)" }}
         >
-          <li>
-            <a href="#about" className="hover:text-gray-400 transition">
-              About
+          <li className="group relative">
+            <a
+              href="#about"
+              className="relative inline-block py-1 text-white transition duration-300 hover:text-gray-300"
+            >
+              <span className="relative z-10 px-2">About</span>
+              <span className="absolute bottom-0 left-1/2 h-[1px] w-0 -translate-x-1/2 bg-white transition-all duration-300 group-hover:w-full" />
             </a>
           </li>
-          <li>
-            <a href="#projects" className="hover:text-gray-400 transition">
-              Projects
+          <li className="group relative">
+            <a
+              href="#projects"
+              className="relative inline-block py-1 text-white transition duration-300 hover:text-gray-300"
+            >
+              <span className="relative z-10 px-2">Projects</span>
+              <span className="absolute bottom-0 left-1/2 h-[1px] w-0 -translate-x-1/2 bg-white transition-all duration-300 group-hover:w-full" />
             </a>
           </li>
-          <li>
-            <a href="#work-experience" className="hover:text-gray-400 transition">
-              Experiences
+          <li className="group relative">
+            <a
+              href="#work-experience"
+              className="relative inline-block py-1 text-white transition duration-300 hover:text-gray-300"
+            >
+              <span className="relative z-10 px-2">Experiences</span>
+              <span className="absolute bottom-0 left-1/2 h-[1px] w-0 -translate-x-1/2 bg-white transition-all duration-300 group-hover:w-full" />
             </a>
           </li>
-          <li>
-            <a href="#contact" className="hover:text-gray-400 transition">
-              Connect
+          <li className="group relative">
+            <a
+              href="#contact"
+              className="relative inline-block py-1 text-white transition duration-300 hover:text-gray-300"
+            >
+              <span className="relative z-10 px-2">Contact</span>
+              <span className="absolute bottom-0 left-1/2 h-[1px] w-0 -translate-x-1/2 bg-white transition-all duration-300 group-hover:w-full" />
             </a>
           </li>
         </ul>
@@ -44,7 +60,7 @@ export default function Home() {
 
       <main className="flex flex-col items-center justify-center">
         <section id="about" className="scroll-mt-24 mt-20 px-4 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24" >
-          <div className="mx-auto flex flex-col items-center justify-center rounded-4xl w-full max-w-6xl px-12 py-16 sm:px-16 sm:py-20 lg:px-24 lg:py-28 backdrop-blur-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+          <div className="mx-auto flex flex-col items-center justify-center rounded-4xl w-full max-w-6xl px-12 py-16  sm:px-16 sm:py-20 lg:px-24 lg:py-28">
             <h1
               className="mb-6 text-center text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
               style={{ fontFamily: "var(--font-instrument-serif)" }}
@@ -68,7 +84,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="w-full px-4 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+        <div className="w-full px-4 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24" style={{ backgroundColor: "var(--color-background-2)" }}>
           <div className="mx-auto max-w-6xl">
             <Projects />
           </div>
@@ -80,7 +96,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full px-4 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+        <div className="w-full px-4 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24" style={{ backgroundColor: "var(--color-background-2)" }}>
           <div className="mx-auto max-w-6xl">
             <Contact />
           </div>
